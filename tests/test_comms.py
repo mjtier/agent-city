@@ -16,7 +16,7 @@ case "$1" in
   auth) [ -n "$FAKE_GH_NOAUTH" ] && { echo "You are not logged into any GitHub hosts" >&2; exit 1; }
         echo "ghtok_SECRET_123" ;;
   pr) case "$2" in
-        create) echo "https://github.com/brandocalricia/agent-city-comms/pull/7" ;;
+        create) echo "https://github.com/mjtier/agent-city-comms/pull/7" ;;
         *) echo "gh pr: unknown" >&2; exit 1 ;;
       esac ;;
   api) if [ "$2" = "--method" ]; then
@@ -50,7 +50,7 @@ case "$1" in
            */contents/*)
              # file missing on first create
              echo '{"message":"Not Found"}' >&2; exit 1 ;;
-           */repos/brandocalricia/agent-city-comms|brandocalricia/agent-city-comms|*/agent-city-comms)
+           */repos/mjtier/agent-city-comms|mjtier/agent-city-comms|*/agent-city-comms)
              echo '{"default_branch":"main"}' ;;
            */issues/[0-9]*)
              echo 1 ;;
@@ -290,7 +290,7 @@ class Send(Base):
         m = comms.parse_message(self.body())
         self.assertEqual((m["from"], m["re"], m["text"]), ("grok-build", "b1", "pong"))
         self.assertRegex(m["id"], r"^g[0-9a-f]{6}$")
-        self.assertIn("repos/brandocalricia/agent-city-comms/issues/1/comments", read(os.path.join(self.d, "args")))
+        self.assertIn("repos/mjtier/agent-city-comms/issues/1/comments", read(os.path.join(self.d, "args")))
 
     def test_webhook_default_header_and_payload(self):
         hook = self.webhook()
@@ -407,7 +407,7 @@ class Setup(Base):
             self.assertEqual(n, 7)
             args = read(os.path.join(self.d, "args"))
             self.assertIn("pr create", args)
-            self.assertIn("repos/brandocalricia/agent-city-comms/git/refs", args)
+            self.assertIn("repos/mjtier/agent-city-comms/git/refs", args)
             self.assertIn("channel/README.md", args)
             self.assertTrue(os.path.exists(os.path.join(self.d, "body.json")))
         finally:

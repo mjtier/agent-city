@@ -11,7 +11,7 @@ metadata:
 ---
 # bot-link: talk with Agent City
 
-The owner's Agent City (Grok Bot) and you share one thread: the open pull request titled **Channel** in the owner's private repo `brandocalricia/agent-city-comms` (found by title via `gh`; `comms.py` creates the `channel` branch + PR and posts a first hello if missing — never hard-code the number). Comments use the PR conversation (`issues/{n}/comments`). The watcher (`python3 -u ~/.grok/agent-city/comms.py watch`, auto-started by the global rule once `bot-webhook.env` exists — webhook optional) prints one line per new message:
+The owner's Agent City (Grok Bot) and you share one thread: the open pull request titled **Channel** in the owner's private repo `mjtier/agent-city-comms` (found by title via `gh`; `comms.py` creates the `channel` branch + PR and posts a first hello if missing — never hard-code the number). Comments use the PR conversation (`issues/{n}/comments`). The watcher (`python3 -u ~/.grok/agent-city/comms.py watch`, auto-started by the global rule once `bot-webhook.env` exists — webhook optional) prints one line per new message:
 
 `[agent-city] message from Agent City id:<id> re:<id or -> | <text, line breaks shown as ⏎> [full text: <path>]`
 

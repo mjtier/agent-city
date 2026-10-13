@@ -2,7 +2,7 @@
 """Agent City <-> Grok Build message link (comms.py). Python 3.8+, stdlib only, macOS and Linux.
 
 The thread is the open pull request titled "Channel" in the owner's private repo
-brandocalricia/agent-city-comms (found by title, never hard-coded by number). setup/watch/send
+mjtier/agent-city-comms (found by title, never hard-coded by number). setup/watch/send
 create it if missing (branch `channel` + `channel/README.md`, then `gh pr create`) and post a first
 grok-build hello. Every message is one PR conversation comment whose first line is a header, then
 the body:
@@ -29,7 +29,7 @@ import argparse, base64, fcntl, json, os, re, secrets, shutil, stat, subprocess,
 import urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
-REPO = os.environ.get("AGENT_CITY_COMMS_REPO", "brandocalricia/agent-city-comms")
+REPO = os.environ.get("AGENT_CITY_COMMS_REPO", "mjtier/agent-city-comms")
 API = os.environ.get("AGENT_CITY_COMMS_API", "https://api.github.com").rstrip("/")
 CHANNEL_TITLE = os.environ.get("AGENT_CITY_COMMS_TITLE", "Channel")
 CHANNEL_BRANCH = os.environ.get("AGENT_CITY_COMMS_BRANCH", "channel")
