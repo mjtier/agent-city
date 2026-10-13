@@ -66,7 +66,7 @@ for key, items in parts.items():
     print(f"decoded {out} ({len(data)} bytes from {len(items)} parts)")
 PY
 
-ROOT="https://raw.githubusercontent.com/brandocalricia/agent-city/main"
+ROOT="https://raw.githubusercontent.com/mjtier/agent-city/main"
 if [ -f .publish-staging/tests.patch ]; then
   curl -fsSL "$ROOT/tests/test_comms.py" -o tests/test_comms.py
   patch -p1 < .publish-staging/tests.patch

@@ -9,5 +9,5 @@ a73bc0e4fb3f512db81268cc67d546ef17c4a472769407f7d39bf460be262145  grok-build/rul
 335924983b8e6b2a08423fa8b7f2f4f66ab8f2a8b2ca905e7085c0a949c250ae  grok-build/city_apply.py
 7c59af8ca32e0981cfa68cd9565641e3d2dffe237e05e019b77ff42e50865ff9  grok-build/comms/bot-link/SKILL.md
 02c8a12a8584b22664d7c2ca7b272a9ddb20bb777e88230a47cb0992fcb297fd  grok-build/comms/comms.py
-d3160f6a3840dd60323bc20a67b5e0172844a17c4a486ccaa066a8204fe41162  grok-build/update.sh
+0e33b724cddb0b2e3d6b1c9cc74fba88e97d2400c577a62e39aed31f0bbfa7aa  grok-build/update.sh
 end

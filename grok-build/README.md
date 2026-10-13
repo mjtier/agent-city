@@ -5,7 +5,7 @@
 ## Install (once per machine)
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/brandocalricia/agent-city/main/grok-build/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mjtier/agent-city/main/grok-build/install.sh | bash
 ```
 
 Restart Grok, then `grok inspect`: look for the rule `40-agent-city.md`, the skills `city-council`, `city-apply`, and `bot-link`, and the hook `agent-city.json`.
@@ -65,7 +65,7 @@ A two-way thread between the owner's Agent City (Grok Bot) and a running Grok Bu
 ## Turn it off
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/brandocalricia/agent-city/main/grok-build/install.sh | bash -s -- --uninstall
+curl -fsSL https://raw.githubusercontent.com/mjtier/agent-city/main/grok-build/install.sh | bash -s -- --uninstall
 ```
 
 Removes the rule, skills, hook, and updater; keeps `applied.json` and backups. Restart Grok.

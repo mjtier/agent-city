@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Agent City for Grok Build: one-command installer (macOS and Linux, bash 3.2+).
-#   curl -fsSL https://raw.githubusercontent.com/brandocalricia/agent-city/main/grok-build/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/mjtier/agent-city/main/grok-build/install.sh | bash
 # Installs into ~/.grok (or $GROK_HOME):
 #   rules/40-agent-city.md, skills/city-council, skills/city-apply, skills/bot-link, hooks/agent-city.json (SessionStart),
 #   agent-city/ (update.sh, city_apply.py, comms.py, suggestions.md, IDEALS.md, prompts.md, pending.txt, applied.json).
@@ -12,7 +12,7 @@
 # Everything runs inside main, so a truncated download executes nothing.
 main() {
   set -eu
-  RAW="${AGENT_CITY_RAW:-https://raw.githubusercontent.com/brandocalricia/agent-city/main}"
+  RAW="${AGENT_CITY_RAW:-https://raw.githubusercontent.com/mjtier/agent-city/main}"
   G="${GROK_HOME:-$HOME/.grok}"
   D="$G/agent-city"
   BK="$D/backup/$(date +%Y%m%d-%H%M%S)"

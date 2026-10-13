@@ -9,7 +9,7 @@
 # Bash 3.2 compatible (macOS). Wrapped in main so a truncated download never runs half a script.
 main() {
   set -u
-  RAW="${AGENT_CITY_RAW:-https://raw.githubusercontent.com/brandocalricia/agent-city/main}"
+  RAW="${AGENT_CITY_RAW:-https://raw.githubusercontent.com/mjtier/agent-city/main}"
   G="${GROK_HOME:-$HOME/.grok}"
   D="$G/agent-city"
   mkdir -p "$D" 2>/dev/null || return 0
